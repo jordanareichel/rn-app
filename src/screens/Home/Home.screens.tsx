@@ -5,6 +5,7 @@ import {theme} from '@styles/theme';
 import {Body, Wrapper} from './Home.styles';
 import {StatusBar} from 'react-native';
 import {Random} from '@components/Random';
+import {Button} from '@components/Button';
 export const Home = () => {
   return (
     <Wrapper>
@@ -16,6 +17,9 @@ export const Home = () => {
           Testando components
         </Text>
         <Random minValue={1} maxValue={60} />
+        <Button onPress={() => console.log('alerta')} block fontColor="white">
+          Voltar
+        </Button>
       </Body>
     </Wrapper>
   );
