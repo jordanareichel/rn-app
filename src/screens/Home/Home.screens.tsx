@@ -4,6 +4,7 @@ import React from 'react';
 import {theme} from '@styles/theme';
 import {Body, Wrapper} from './Home.styles';
 import {StatusBar} from 'react-native';
+import {Random} from '@components/Random';
 export const Home = () => {
   return (
     <Wrapper>
@@ -12,8 +13,9 @@ export const Home = () => {
         <Text
           fontSize={_.get(theme, 'font.lg')}
           color={_.get(theme, 'colors.dark')}>
-          Ola react native
+          Testando components
         </Text>
+        <Random minValue={1} maxValue={60} />
       </Body>
     </Wrapper>
   );
