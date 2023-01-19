@@ -1,6 +1,7 @@
 import _ from '@utils/object';
 import LinearGradient from 'react-native-linear-gradient';
 import styled, {css} from 'styled-components/native';
+
 import {PaperProps, GradientProps} from './Paper.types';
 
 const gradientSettings = {

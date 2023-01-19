@@ -6,6 +6,7 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "isolatedModules": true,
+    "module": "CommonJS",
     "jsx": "react-native",
     "lib": ["es2017"],
     "types": ["react-native", "jest", "styled-components-react-native"],

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Paper component renders correctly 1`] = `
+<View
+  elevation={1}
+  shadowColor="black"
+  style={
+    Array [
+      Object {
+        "alignItems": "flex-start",
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "transparent",
+        "borderRadius": 8,
+        "borderWidth": 0,
+        "flexDirection": "row",
+        "height": "auto",
+        "justifyContent": "flex-start",
+        "overflow": "hidden",
+        "position": "relative",
+        "width": "auto",
+      },
+    ]
+  }
+/>
+`;

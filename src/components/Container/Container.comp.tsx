@@ -1,9 +1,10 @@
 import React, {useEffect, useMemo} from 'react';
 import {useIsFocused} from '@react-navigation/native';
 import _ from '@utils/object';
+import LinearGradient from 'react-native-linear-gradient';
+
 import {StatusBar, Platform} from 'react-native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
-import LinearGradient from 'react-native-linear-gradient';
 import {useTheme} from 'styled-components/native';
 import {Wrapper, Background, styles} from './Container.styles';
 import {ContainerProps} from './Container.types';
