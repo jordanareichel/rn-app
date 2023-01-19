@@ -1,30 +1,38 @@
-import {Paper} from '@components/Paper';
-import {Text} from '@components/Text';
-import {theme} from '@styles/theme';
-import _ from '@utils/object';
-import styled, {css} from 'styled-components/native';
+import {Paper, PaperProps} from '@components/Paper';
+import {FunctionComponent} from 'react';
+import styled from 'styled-components/native';
 
-export const Wrapper = styled(Paper)`
-  width: 100%;
-  height: 56px;
-  padding: 12px 16px;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+export const Wrapper = styled<
+  FunctionComponent<PaperProps & {topSpacing?: number}>
+>(Paper)`
+  top: ${({topSpacing = 0}) => topSpacing}px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 31px 0;
+  min-height: 70px;
 `;
 
 export const Row = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 `;
 
-export const Title = styled(Text)<{hasIcon?: boolean}>`
-  ${({hasIcon}) => css`
-    margin: 0 0 0 ${hasIcon ? 8 : 0}px;
-  `}
+export const IconBack = styled.TouchableOpacity`
+  margin: 0 17px;
+  left: 5px;
 `;
 
-export const ButtonSubmit = styled.TouchableOpacity`
-  background-color: ${_.get(theme, 'colors.light')};
+export const Items = styled.View`
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const Notifications = styled.TouchableOpacity`
+  justify-content: flex-end;
+  right: 28px;
 `;

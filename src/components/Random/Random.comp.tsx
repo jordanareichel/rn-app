@@ -14,7 +14,8 @@ export const Random: React.FC<RandomProps> = props => {
   return (
     <Text
       fontSize={_.get(theme, 'font.md')}
-      color={_.get(theme, 'colors.dark')}>
+      color={_.get(theme, 'colors.dark')}
+      fontWeight={'bold'}>
       Valor aleatório é {random}
     </Text>
   );

@@ -18,7 +18,7 @@ export type MenuProps = {
 const MENU: MenuProps[] = [
   {
     title: 'Mega Sena',
-    icon: 'calc',
+    icon: 'grid',
     route: 'Mega',
     description: 'Aposte',
   },
@@ -30,13 +30,13 @@ const MENU: MenuProps[] = [
   },
   {
     title: 'Tarefas',
-    icon: 'calc',
+    icon: 'file-text',
     route: '',
     description: 'Crie sua lista de tarefas',
   },
   {
     title: 'Instagram',
-    icon: 'calc',
+    icon: 'instagram',
     route: '',
     description: 'Navegue pelo app',
   },
@@ -55,7 +55,7 @@ export const Home = () => {
         barStyle: 'dark-content',
         backgroundColor: 'white',
       }}>
-      <Header title="Bem vindo" />
+      <Header title="Bem vindo" icon={'menu'} showNotification />
       <FlatList
         data={MENU}
         numColumns={2}

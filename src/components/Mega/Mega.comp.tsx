@@ -16,7 +16,7 @@ export const Mega: React.FC<MegaProps> = props => {
         keyboardType={'numeric'}
       />
       <ButtonGenerate onPress={onPress} disabled={!quantity}>
-        <Text fontSize={16} color="white">
+        <Text fontSize={16} color="white" fontWeight="bold">
           Gerar
         </Text>
       </ButtonGenerate>

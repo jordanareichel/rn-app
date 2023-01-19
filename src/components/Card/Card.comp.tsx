@@ -11,11 +11,11 @@ export const Card: React.FC<CardProps> = props => {
   return (
     <TouchableOpacity disabled={disabled} onPress={onPress}>
       <Wrapper radius={8} elevation={8}>
-        <Icon name={icon} size={40} />
-        <Title fontSize={18} align="left" color={'black'}>
+        <Icon name={icon} size={40} color={'black'} />
+        <Title align="left" fontWeight="bold">
           {title}
         </Title>
-        <Text fontSize={14} align={'left'} color={'black'}>
+        <Text align={'left'} fontSize={14}>
           {description}
         </Text>
       </Wrapper>
