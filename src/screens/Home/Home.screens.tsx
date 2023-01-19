@@ -20,13 +20,13 @@ const MENU: MenuProps[] = [
     title: 'Mega Sena',
     icon: 'grid',
     route: 'Mega',
-    description: 'Aposte',
+    description: 'Gere números e aposte',
   },
   {
     title: 'Calculadora',
     icon: 'calc',
-    route: '',
-    description: 'Calcule agora',
+    route: 'Calculator',
+    description: 'Faça calculos agora mesmo',
   },
   {
     title: 'Tarefas',
