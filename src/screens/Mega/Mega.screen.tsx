@@ -6,11 +6,12 @@ import {Text} from '@components/Text';
 import {Header} from '@components/Header';
 import {Mega as CompMega} from '@components/Mega';
 import {Loader} from '@components/Loader';
-import {Body} from './Mega.styles';
+import {Body, Row} from './Mega.styles';
+import {Ball} from '@components/Ball';
 
 export const Mega = () => {
   const [value, setValue] = useState(0);
-  const [generateNumber, setGenerateNumber] = useState([]);
+  const [generateNumber, setGenerateNumber] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -21,23 +22,13 @@ export const Mega = () => {
     }
   });
 
-  function handleChangeValue(val: number) {
-    setValue(val);
-  }
-
-  function getNumber(val) {
-    const random = Math.floor(Math.random() * 1000000);
-    return val.includes(random) ? getNumber(val) : random;
-  }
-
   function handleGenerateNumbers() {
     setLoading(true);
-    const number = Array(value)
-      .fill({})
-      .reduce(num => [...num, getNumber(num)], [])
-      .sort((a, b) => a - b);
-
-    setGenerateNumber(number);
+    const numbers: any[] = [];
+    for (let i = 0; i < value; i++) {
+      numbers[i] = Math.floor(Math.random() * 60 + 1);
+    }
+    setGenerateNumber(numbers);
   }
 
   return (
@@ -53,16 +44,17 @@ export const Mega = () => {
           <Text align="center" fontWeight="bold" fontSize={22}>
             Gerador de Mega Sena
           </Text>
-          {generateNumber.length > 0 && !loading && (
-            <>
-              <Text>Número gerado</Text>
-              <Text fontWeight="bold">{generateNumber.join(',')}</Text>
-            </>
-          )}
         </View>
+        {generateNumber.length > 0 && !loading && (
+          <Row>
+            {generateNumber.map((item, index) => (
+              <Ball key={index} numbers={item} />
+            ))}
+          </Row>
+        )}
         <CompMega
           quantity={value}
-          onChangeValue={handleChangeValue}
+          onChangeValue={e => setValue(e)}
           onPress={() => handleGenerateNumbers()}
         />
       </Body>
