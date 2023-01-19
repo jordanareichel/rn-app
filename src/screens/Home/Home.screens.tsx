@@ -1,22 +1,77 @@
-import {Text} from '@components/Text';
-import _ from '@utils/object';
 import React from 'react';
-import {theme} from '@styles/theme';
-import {Body, Wrapper} from './Home.styles';
-import {StatusBar} from 'react-native';
-import {Random} from '@components/Random';
+import {styles} from './Home.styles';
+import {FlatList} from 'react-native';
+import {Card} from '@components/Card';
+import {useNavigation} from '@react-navigation/native';
+import {Container} from '@components/Container';
+import {Header} from '@components/Header';
+import {StackParamList} from '@navigation/Routers.type';
+
+export type MenuProps = {
+  title: string;
+  icon: string;
+  route: string;
+  params?: any;
+  description: string;
+};
+
+const MENU: MenuProps[] = [
+  {
+    title: 'Mega Sena',
+    icon: 'calc',
+    route: 'Mega',
+    description: 'Aposte',
+  },
+  {
+    title: 'Calculadora',
+    icon: 'calc',
+    route: '',
+    description: 'Calcule agora',
+  },
+  {
+    title: 'Tarefas',
+    icon: 'calc',
+    route: '',
+    description: 'Crie sua lista de tarefas',
+  },
+  {
+    title: 'Instagram',
+    icon: 'calc',
+    route: '',
+    description: 'Navegue pelo app',
+  },
+];
+
 export const Home = () => {
+  const navigation = useNavigation<any>();
+
+  function handlePress(route: string, params: any) {
+    navigation.navigate(route as keyof StackParamList, params);
+  }
+
   return (
-    <Wrapper>
-      <StatusBar barStyle={'dark-content'} backgroundColor={'white'} />
-      <Body>
-        <Text
-          fontSize={_.get(theme, 'font.lg')}
-          color={_.get(theme, 'colors.dark')}>
-          Testando components
-        </Text>
-        <Random minValue={1} maxValue={60} />
-      </Body>
-    </Wrapper>
+    <Container
+      statusBar={{
+        barStyle: 'dark-content',
+        backgroundColor: 'white',
+      }}>
+      <Header title="Bem vindo" />
+      <FlatList
+        data={MENU}
+        numColumns={2}
+        columnWrapperStyle={styles.column}
+        contentContainerStyle={styles.body}
+        keyExtractor={(item, index) => index.toString()}
+        renderItem={({item: {route, params, ...itemProps}, index}) => {
+          return (
+            <Card
+              key={index}
+              {...itemProps}
+              onPress={() => route && handlePress(route, params)}
+            />
+          );
+        }}
+      />
+    </Container>
   );
 };

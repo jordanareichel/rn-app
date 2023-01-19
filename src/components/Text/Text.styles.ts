@@ -3,8 +3,9 @@ import {Text} from 'react-native';
 import {TextProps} from './Text.types';
 
 export const TextRn = styled(Text)<TextProps>`
-  ${({fontSize = '', color = ''}) => css`
+  ${({fontSize = '', color = '', align = 'center'}) => css`
     font-size: ${fontSize}px;
     color: ${color};
+    text-align: ${align};
   `}
 `;

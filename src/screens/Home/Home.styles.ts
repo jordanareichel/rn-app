@@ -1,13 +1,16 @@
-import {theme} from '@styles/theme';
-import _ from '@utils/object';
-import {SafeAreaView} from 'react-native-safe-area-context';
-import styled from 'styled-components/native';
+import {StyleSheet} from 'react-native';
 
-export const Wrapper = styled(SafeAreaView)`
-  flex: 1;
-  background-color: ${_.get(theme, 'colors.light')};
-`;
-
-export const Body = styled.View`
-  padding: 16px;
-`;
+export const styles = StyleSheet.create({
+  column: {
+    flex: 1,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  body: {
+    paddingTop: 32,
+    padding: 16,
+  },
+});

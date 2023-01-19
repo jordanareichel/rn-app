@@ -1,15 +1,14 @@
-// prettier-ignore
 {
-  "extends": "@tsconfig/react-native/tsconfig.json",     /* Recommended React Native TSConfig base */
+  "extends": "@tsconfig/react-native/tsconfig.json" /* Recommended React Native TSConfig base */,
   "compilerOptions": {
-    "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */,
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "isolatedModules": true,
     "jsx": "react-native",
     "lib": ["es2017"],
-    "types": ["react-native", "jest"],
+    "types": ["react-native", "jest", "styled-components-react-native"],
     "moduleResolution": "node",
     "noEmit": true,
     "strict": true,
@@ -17,22 +16,12 @@
     "noImplicitAny": false,
     "baseUrl": "./",
     "paths": {
-			"@components/*": [
-				"./src/components/*"
-			],
-			"@screens/*": [
-				"./src/screens/*"
-			],
-      "@styles/*": [
-				"./src/styles/*"
-			],
-      "@utils/*": [
-				"./src/utils/*"
-			],
-      "@navigation/*": [
-				"./src/navigation/*"
-			],
-		},
+      "@components/*": ["./src/components/*"],
+      "@screens/*": ["./src/screens/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@navigation/*": ["./src/navigation/*"]
+    }
   },
   "exclude": [
     "node_modules",
