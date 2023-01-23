@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Mega renderer currently 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "marginTop": 32,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#DEDCDB",
+          "borderRadius": 4,
+          "borderStyle": "solid",
+          "flexDirection": "row",
+          "minHeight": 56,
+          "overflow": "hidden",
+          "position": "relative",
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <TextInput
+      editable={true}
+      keyboardType="numeric"
+      onChangeText={[Function]}
+      placeholder="Digite um número"
+      style={
+        Array [
+          Object {
+            "borderColor": "black",
+            "borderStyle": "solid",
+            "borderWidth": 0,
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "fontSize": 16,
+            "height": "100%",
+            "left": 5,
+            "top": 10,
+            "width": "100%",
+            "zIndex": 2,
+          },
+        ]
+      }
+      value="0"
+    />
+  </View>
+  <View
+    accessibilityState={
+      Object {
+        "disabled": true,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#000000",
+        "borderRadius": 16,
+        "marginBottom": 32,
+        "marginLeft": 32,
+        "marginRight": 32,
+        "marginTop": 32,
+        "opacity": 1,
+        "paddingBottom": 16,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 16,
+      }
+    }
+  >
+    <Text
+      color="white"
+      fontSize={16}
+      fontWeight="bold"
+      style={
+        Array [
+          Object {
+            "color": "white",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "textAlign": "center",
+          },
+        ]
+      }
+    >
+      Gerar
+    </Text>
+  </View>
+</View>
+`;

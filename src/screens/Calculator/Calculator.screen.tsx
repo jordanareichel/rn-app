@@ -1,3 +1,4 @@
+/* eslint-disable no-eval */
 import React, {useState} from 'react';
 
 import {Container} from '@components/Container';
@@ -10,7 +11,7 @@ import {Display} from '@components/Display';
 const initialValue = {
   displayValue: '0',
   clearDisplay: false,
-  operation: '',
+  operation: null,
   values: [0, 0],
   current: 0,
 };
@@ -28,7 +29,6 @@ export const Calculator = () => {
     }
 
     setNewValues({...newValues, displayValue, clearDisplay: false});
-    console.log(newValues.current);
 
     if (label !== '.') {
       const newValue = parseFloat(displayValue);
@@ -39,7 +39,7 @@ export const Calculator = () => {
         values,
         current: newValues.current,
         clearDisplay: false,
-        operation: '',
+        operation: null,
       });
     }
   }
@@ -48,12 +48,31 @@ export const Calculator = () => {
     setNewValues({...initialValue});
   }
 
-  function setOperation(operation: string) {
+  function setOperation(operation) {
     if (newValues.current === 0) {
-      setNewValues({...newValues, operation, current: 1, clearDisplay: true});
+      setNewValues({
+        ...newValues,
+        operation,
+        current: 1,
+        clearDisplay: true,
+      });
     } else {
       const equals = operation === '=';
       const values = [...newValues.values];
+      try {
+        values[0] = eval(`${values[0]} ${operation} ${values[1]}`);
+      } catch (err) {
+        values[0] = newValues.values[0];
+      }
+
+      values[1] = 0;
+      setNewValues({
+        displayValue: `${values[0]}`,
+        operation: equals ? '' : operation,
+        current: equals ? 0 : 1,
+        clearDisplay: true,
+        values,
+      });
     }
   }
 

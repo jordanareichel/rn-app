@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Loader renderer currently 1`] = `
+<Modal
+  animationType="fade"
+  hardwareAccelerated={false}
+  visible={true}
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignSelf": "center",
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "justifyContent": "center",
+        },
+      ]
+    }
+  >
+    <ActivityIndicator
+      color="green"
+    />
+    <Text
+      color="black"
+      fontSize={18}
+      fontWeight="semi-bold"
+      style={
+        Array [
+          Object {
+            "color": "black",
+            "fontSize": 18,
+            "fontWeight": "semi-bold",
+            "textAlign": "center",
+          },
+          Object {
+            "marginBottom": 0,
+            "marginLeft": 0,
+            "marginRight": 0,
+            "marginTop": 16,
+          },
+        ]
+      }
+    />
+  </View>
+</Modal>
+`;

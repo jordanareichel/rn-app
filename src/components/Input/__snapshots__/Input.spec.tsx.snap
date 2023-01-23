@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Input renderer currently 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#DEDCDB",
+        "borderRadius": 4,
+        "borderStyle": "solid",
+        "flexDirection": "row",
+        "minHeight": 56,
+        "overflow": "hidden",
+        "position": "relative",
+        "width": "100%",
+      },
+    ]
+  }
+>
+  <TextInput
+    editable={true}
+    onChangeText={[Function]}
+    style={
+      Array [
+        Object {
+          "borderColor": "black",
+          "borderStyle": "solid",
+          "borderWidth": 0,
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "fontSize": 16,
+          "height": "100%",
+          "left": 5,
+          "top": 10,
+          "width": "100%",
+          "zIndex": 2,
+        },
+      ]
+    }
+  />
+</View>
+`;

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Text renders correctly 1`] = `
+<Text
+  color="black"
+  fontSize={18}
+  fontWeight="bold"
+  style={
+    Array [
+      Object {
+        "color": "black",
+        "fontSize": 18,
+        "fontWeight": "bold",
+        "textAlign": "center",
+      },
+    ]
+  }
+>
+  This is the Text
+</Text>
+`;

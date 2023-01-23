@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Random renderer currently 1`] = `
+<Text
+  color="#000000"
+  fontSize="14"
+  fontWeight="bold"
+  style={
+    Array [
+      Object {
+        "color": "#000000",
+        "fontSize": 14,
+        "fontWeight": "bold",
+        "textAlign": "center",
+      },
+    ]
+  }
+>
+  Valor aleatório é 
+  12
+</Text>
+`;
