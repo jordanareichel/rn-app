@@ -24,7 +24,7 @@ export const Calculator = () => {
     const currentValue = clear ? '' : newValues.displayValue;
     const displayValue = currentValue + label;
 
-    if (label === '.' && newValues.displayValue.includes('.')) {
+    if (label === '.' && !clear && newValues.displayValue.includes('.')) {
       return;
     }
 
